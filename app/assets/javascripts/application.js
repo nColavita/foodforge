@@ -16,6 +16,23 @@
 //= require_tree .
 
 
+$(document).ready(function(){
+
 // ------ Handle Broken Images ----- //
 
 // ------ Handle Broken Images ----- //
+
+
+// ------ Flash Notice Timeout ----- //
+
+	  setTimeout(function(){
+	    $('.notice').fadeOut();
+	  }, 2000);
+
+	  setTimeout(function(){
+	    $('.alert').fadeOut();
+	  }, 2000);
+
+// ------ Flash Notice Timeout ----- //
+
+})
