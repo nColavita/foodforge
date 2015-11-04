@@ -28,8 +28,8 @@
 		<%= link_to 'foodforge', root_path, {:class => "home"} %>
 		<nav>
 			<ul>
-				<li>login</li>
-				<li>signup</li>
+				<li><%= link_to 'login' ,signin_path, {:class => "links"} %></li>
+				<li><%= link_to 'sign up', new_user_path, {:class => "links"} %></li>
 			</ul>
 		</nav>
 	</header>

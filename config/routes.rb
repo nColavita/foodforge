@@ -5,4 +5,9 @@ Rails.application.routes.draw do
   get '/search', to: 'recipes#search'
   root 'home#show'
 
+  resources :users
+  get 'signin', to: 'sessions#new'
+  post 'signin', to: 'sessions#create'
+  delete 'signout', to: 'sessions#destroy'
+
 end

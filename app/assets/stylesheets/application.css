@@ -49,15 +49,19 @@
 
 	header nav ul li {
 		display: inline-block;
-		text-decoration: none;
 		font-size: 2em;
-		background-color: white;
 		padding: .8em .2em .8em .2em;
-		color: black;
 	}
 
 	header nav ul li:hover{
 		background-color: #F58F11;
+	}
+
+	.links{
+		color: black;
+	}
+
+	.links:hover{
 		color: white;
 	}
 
