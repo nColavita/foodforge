@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   	@user = User.new(params_user)
   	if @user.save
   		session[:user_id] = @user.id
-  		redirect_to @user, notice: 'New account created.'
+  		redirect_to root_path, notice: 'New account created.'
   	else
   		render :new 
   	end
