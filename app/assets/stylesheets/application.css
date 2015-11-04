@@ -1,0 +1,222 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ .notice, .alert{
+ 	font-size: 2em;
+ 	background-color: #FF362F;
+ 	color: white;
+ 	padding-left: .4em;
+ }
+
+ .container{
+ 	width: 100%;
+ }
+
+/********* NAV **********/
+
+	.nav{
+		width: 100%;
+		margin: 0;
+		/*background-color: #FFF1C7;*/
+	}
+
+	header{
+		height: 5.95em;
+	}
+
+	nav{
+		float: right;
+		/*margin: 20px 0px 10px 0px;*/
+	}
+
+	header nav ul{
+		padding-right: 1em;
+		margin-bottom: 0;
+	}
+
+	header nav ul li {
+		display: inline-block;
+		text-decoration: none;
+		font-size: 2em;
+		background-color: white;
+		padding: .8em .2em .8em .2em;
+		color: black;
+	}
+
+	header nav ul li:hover{
+		background-color: #F58F11;
+		color: white;
+	}
+
+	.home{
+		float: left;
+		padding-left: 1em;
+		padding-top: .35em;
+		text-decoration: none;
+		color: black;
+		font-size: 3em;
+		font-family: 'Josefin Sans', sans-serif;
+	}
+
+/********* NAV **********/
+
+/********* Home Page Part1 **********/
+
+	.home_page{
+		background-image: url("cooking.jpg");
+		background-size: 100%;
+	}
+
+	.col-md-3{
+		margin-bottom: 1em;
+	}
+
+	.top_recipe{
+		width: 100%;
+		height: 250px;
+		background-color: #E8E8F5;
+	}
+
+	.search_area{
+		text-align: center;
+		margin: 10em 0em 5em 0em;
+	}
+
+	.text_section{
+		background-color: rgba(242,224,200,.75);
+		width: 0 auto;
+		margin: 0em 10em 0em 10em;
+		padding: 1em;
+	}
+
+	.recipes_of_the_week{
+		font-size: 3em;
+		color: black;
+	}
+
+	/***** Form *****/
+
+		input.form_entry{
+			width: 40%;
+			height: 90px;
+			font-size: 4em;
+		}
+
+		input[type="text"]{
+			outline-width: 0;
+			text-decoration: none;
+			border: 0px solid;
+			padding-left: .2em;
+		}
+
+	/***** Form *****/
+
+/********* Home Page Part1 **********/
+
+/********* Home Page Part2 **********/
+
+	.company_info{
+		background-color: white;
+		text-align: center;
+	}
+
+	.company_agenda{
+		padding-top: 2em;
+		border-bottom: solid #ccc 1px;
+	}
+
+	.company_goals{
+		margin-top: 2em;
+		font-size: 1.5em;
+		margin-bottom: 3em;
+	} 
+
+	.text1 {
+		border-right: solid #ccc 1px;
+	}
+
+	.text2 {
+		border-right: solid #ccc 1px;
+		height: 130px;
+	}
+
+	.icon{
+
+	}
+
+/********* Home Page Part2 **********/
+
+/********* Home Page Part3 **********/
+
+	.connect{
+		background-color: #F5342D;
+		height: 120px;
+	}
+
+	.connect nav{
+		margin-top: 3em;
+		float: left;
+	}
+
+	.connect ul li{
+		display: inline-block;
+		text-decoration: none;
+		font-size: 2em;
+		margin-left: .5em;
+	}
+
+/********* Home Page Part3 **********/
+
+/********* Recipes Index **********/
+
+.matches{
+	margin-top: 5em;
+}
+
+ .recipes{
+ 	margin: .2em 0em .2em 0em;
+ }
+
+ .recipecontent img{
+ 	text-align: center;
+ }
+
+	.recipecontent{
+		/*background-color: #DDECF5;*/
+		
+		box-shadow: 3px 3px 3px 1px #ccc;
+		padding: .5em;
+	}
+
+	.image img{
+		max-width: 350px;
+		max-height: 100%;
+		margin-left: 5%;
+	}
+
+/********* Recipes Index **********/
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,21 @@
+<div class="container">
+</div>
+
+<div class="container matches">
+	<div class="row">
+		<% @recipes.each do |recipe| %>
+			<% if recipe.image != nil && (Net::HTTP.get_response(URI.parse(recipe.image)).code == '200')%>
+					<div class="col-md-4 recipes">
+						<div class="recipecontent">
+							<h1><%= recipe.name %></h1><br>
+								<div class="image">
+									<%= image_tag recipe.image %>
+								</div>
+							<%= recipe.ingredients.gsub!(/\n/,', ') %>
+						</div>
+					</div>
+			<% end %>
+		<% end %>
+	</div>
+</div>
+
