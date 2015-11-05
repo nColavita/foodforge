@@ -4,18 +4,35 @@
 <div class="container matches">
 	<div class="row">
 		<% @recipes.each do |recipe| %>
-			<% if recipe.image != nil && (Net::HTTP.get_response(URI.parse(recipe.image)).code == '200')%>
-					<div class="col-md-4 recipes">
-						<div class="recipecontent">
-							<h1><%= recipe.name %></h1><br>
-								<div class="image">
-									<%= image_tag recipe.image %>
-								</div>
-							<%= recipe.ingredients.gsub!(/\n/,', ') %>
-						</div>
+			<% if recipe.image != nil %>
+				<div class="col-md-4 recipes">
+					<div class="recipecontent">
+						<h1><%= recipe.name %></h1><br>
+							<div class="image">
+								<%= image_tag recipe.image %>
+							</div>
+							<p><%= recipe.description %></p><br>
+								<% if recipe.recipeYield %>
+									<p>Serves <%= recipe.recipeYield%></p>
+								<% end %>
+								<% if recipe.prepTime %>
+									<p>Prep Time <%= recipe.prepTime %></p>
+								<% end %>
+								<% if recipe.cookTime %>
+									<p>Cook Time <%= recipe.cookTime%></p>
+								<% end %>
+								<%= recipe.ingredients.gsub!(/\n/,', ')%>
+							<hr>
+						<p><%= button_to 'favorite', favorite_recipe_path(recipe.id) %> </p>
 					</div>
+
+				</div>
+
 			<% end %>
 		<% end %>
 	</div>
+	
 </div>
 
+
+ <!-- && (Net::HTTP.get_response(URI.parse(recipe.image)).code == '200') -->

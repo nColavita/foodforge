@@ -1,2 +1,49 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<div class="container profile">
+	<div class="row">
+		<div class="md-col-12 username">
+			<h1><%= current_user.email %></h1>
+		</div>
+		<h3>Your Recipes</h3>
+	</div>
+</div>
+
+<% if @user.favorites.any? %>
+	<div class="container">
+	</div>
+
+	<div class="container matches">
+		<div class="row">
+			<% @user.recipes.each do |recipe| %>
+				<% if recipe.image != nil %>
+					<div class="col-md-4 recipes">
+						<div class="recipecontent">
+							<h1><%= recipe.name %></h1><br>
+								<div class="image">
+									<%= image_tag recipe.image %>
+								</div>
+								<p><%= recipe.description %></p><br>
+									<% if recipe.recipeYield %>
+										<p>Serves <%= recipe.recipeYield%></p>
+									<% end %>
+									<% if recipe.prepTime %>
+										<p>Prep Time <%= recipe.prepTime %></p>
+									<% end %>
+									<% if recipe.cookTime %>
+										<p>Cook Time <%= recipe.cookTime%></p>
+									<% end %>
+									<%= recipe.ingredients.gsub!(/\n/,', ')%>
+								<hr>
+								<!-- Twilio text functionality -->
+							<p><%= button_to 'text me!', favorite_recipe_path(recipe.id) %> </p>
+						</div>
+
+					</div>
+
+				<% end %>
+			<% end %>
+		</div>
+		
+	</div>
+<% end %>
+
+

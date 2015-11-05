@@ -1,9 +1,11 @@
 class Recipe < ActiveRecord::Base
+	has_many :users, through: :favorites
+	
+	# after_create :add_current_user_to_recipe_users
 
 	def self.find_matches(query)
   	where('ingredients LIKE :query', query: "%#{query}%")
 	end
-	
 end
 
 #Grab the instance variable from the form submission, break it up into an array

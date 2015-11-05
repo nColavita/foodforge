@@ -11,4 +11,13 @@ class RecipesController < ApplicationController
 		@recipes = @matches.first(20)
 	end
 
+	def favorite
+		@recipe = Recipe.find(params[:id])
+		Favorite.create(user_id: current_user.id, recipe_id: @recipe.id)
+		redirect_to root_path, notice: "Favorited #{@recipe.name}."
+	end
+
+	def unfavorite
+	end
+
 end
