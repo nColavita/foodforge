@@ -16,7 +16,7 @@
 //= require_tree .
 
 
-$(document).ready(function(){
+$(document).on("page:load",function(){
 
 // ------ Handle Broken Images ----- //
 

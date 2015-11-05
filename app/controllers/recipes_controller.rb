@@ -14,10 +14,14 @@ class RecipesController < ApplicationController
 	def favorite
 		@recipe = Recipe.find(params[:id])
 		Favorite.create(user_id: current_user.id, recipe_id: @recipe.id)
-		redirect_to root_path, notice: "Favorited #{@recipe.name}."
+		redirect_to current_user, notice: "Favorited #{@recipe.name}."
 	end
 
 	def unfavorite
+		@recipe = Recipe.find(params[:id])
+		@fav = Favorite.find_by(user_id: current_user.id, recipe_id: @recipe.id)
+		@fav.destroy
+		redirect_to current_user, notice: "Unfavorited #{@recipe.name}"
 	end
 
 end

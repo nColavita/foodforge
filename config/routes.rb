@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   	end
   end
   
-  post '/search', to: 'recipes#search'
+  # post '/search', to: 'recipes#search'
   get '/search', to: 'recipes#search'
 
  

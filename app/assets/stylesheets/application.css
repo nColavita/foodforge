@@ -201,7 +201,7 @@
 	.recipecontent{
 		/*background-color: #DDECF5;*/
 		
-		box-shadow: 3px 3px 3px 1px #ccc;
+		box-shadow: 1px 1px 5px 1px #ccc;
 		padding: .5em;
 	}
 
