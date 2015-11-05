@@ -1,7 +1,12 @@
+<div id='notice'>
+  <%= render 'flash' , :locals => { :flash => flash } %>
+</div> 
+
 <div class="container">
 </div>
 
 <div class="container matches">
+	<h1>Our Results!</h1>
 	<div class="row">
 		<% @recipes.each do |recipe| %>
 			<% if recipe.image != nil %>
@@ -23,9 +28,12 @@
 								<% end %>
 								<%= recipe.ingredients.gsub!(/\n/,', ')%>
 							<hr>
-						<p><%= button_to 'favorite', favorite_recipe_path(recipe.id) %> </p>
+						<% if @user.recipes.include? recipe %>
+							<p class="unfavorite"><%= button_to 'unfavorite', unfavorite_recipe_path(recipe.id), remote: true %> </p>
+						<% else %>
+							<p class='favorite'><%= button_to 'favorite', favorite_recipe_path(recipe.id), remote: true %> </p>
+						<% end %>
 					</div>
-
 				</div>
 
 			<% end %>

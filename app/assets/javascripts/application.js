@@ -16,23 +16,13 @@
 //= require_tree .
 
 
-$(document).on("page:load",function(){
+$(document).on("page:change",function(){
 
-// ------ Handle Broken Images ----- //
+// ------ AJAX Favorite and Unfavorite ----- //
+	$('#fav').on('ajax:success', function(){
+		$(this).fadeOut()
+	})
+// ------ AJAX Favorite and Unfavorite ----- //
 
-// ------ Handle Broken Images ----- //
-
-
-// ------ Flash Notice Timeout ----- //
-
-	  setTimeout(function(){
-	    $('.notice').fadeOut();
-	  }, 2000);
-
-	  setTimeout(function(){
-	    $('.alert').fadeOut();
-	  }, 2000);
-
-// ------ Flash Notice Timeout ----- //
 
 })
