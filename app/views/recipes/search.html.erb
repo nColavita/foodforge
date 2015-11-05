@@ -26,13 +26,17 @@
 								<% if recipe.cookTime %>
 									<p>Cook Time <%= recipe.cookTime%></p>
 								<% end %>
-								<%= recipe.ingredients.gsub!(/\n/,', ')%>
+								<% if current_user %>
+									<%= recipe.ingredients.gsub!(/\n/,', ')%>
+								<% end %>
 							<hr>
-						<% if @user.recipes.include? recipe %>
-							<p class="unfavorite"><%= button_to 'unfavorite', unfavorite_recipe_path(recipe.id), remote: true %> </p>
-						<% else %>
-							<p class='favorite'><%= button_to 'favorite', favorite_recipe_path(recipe.id), remote: true %> </p>
-						<% end %>
+								<% if current_user %> 
+									<% if @user.recipes.include? recipe %>
+										<p class="unfavorite"><%= button_to 'unfavorite', unfavorite_recipe_path(recipe.id), remote: true %> </p>
+									<% else %>
+										<p class='favorite'><%= button_to 'favorite', favorite_recipe_path(recipe.id), remote: true %> </p>
+									<% end %>
+								<% end %>
 					</div>
 				</div>
 

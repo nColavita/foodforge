@@ -6,6 +6,15 @@ class Recipe < ActiveRecord::Base
 	def self.find_matches(query)
   	where('ingredients LIKE :query', query: "%#{query}%")
 	end
+
+	def self.find_multiple(*query)
+	  rel = self
+	  keywords.each do |k|
+	    rel = rel.where("ingredients LIKE ?", "%#{k}%")
+	  end
+	  rel
+	end
+
 end
 
 #Grab the instance variable from the form submission, break it up into an array

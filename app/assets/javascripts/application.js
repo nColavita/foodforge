@@ -19,9 +19,10 @@
 $(document).on("page:change",function(){
 
 // ------ AJAX Favorite and Unfavorite ----- //
-	$('#fav').on('ajax:success', function(){
-		$(this).fadeOut()
-	})
+	// $('.button_to').on('ajax:success', function(){
+	// 	$(this).html('<input type="submit" input value="Unfavorite" />');
+	// 	$(this).
+	// })
 // ------ AJAX Favorite and Unfavorite ----- //
 
 
