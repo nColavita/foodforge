@@ -9,7 +9,6 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
-//
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
@@ -19,6 +18,14 @@
 $(document).on("page:change",function(){
 
 // ------ Masonry Grid System ----- //
+
+	$('.grid').masonry({
+		columnWidth: '.grid-sizer',
+		// do not use .grid-sizer in layout
+		itemSelector: '.grid-item',
+		percentPosition: true,
+		gutter: 5
+	});
 
 // ------ Masonry Grid System ----- //
 

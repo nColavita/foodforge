@@ -14,7 +14,14 @@
  *= require_self
  */
 
+.grid-sizer, .grid-item{
+	width: 33%;
+}
 
+.grid-item{
+	margin-bottom: .2em;
+	float: left;
+}
 
  .notice, .alert{
  	font-size: 2em;
@@ -188,30 +195,30 @@
 
 /********* Recipes Index **********/
 
-	.matches{
+/*	.matches{
 		margin-top: 5em;
-	}
+	}*/
 
- .recipe{
+ /*.recipe{
  	margin: .2em .4em .4em .4em;
 
  	display: inline-block;
- }
+ }*/
 
- .recipecontent img{
+/* .recipecontent img{
  	text-align: center;
- }
+ }*/
 
 	.recipecontent{
 		background-color: #F8FFFE;
 		
 		box-shadow: 1px 1px 5px 1px #ccc;
 		padding: .5em;
+		overflow: hidden;
 	}
 
 	.image img{
-		max-width: 100%;
-		/*margin-left: 5%;*/
+		max-width: 65%;
 	}
 
 /********* Recipes Index **********/

@@ -1,25 +1,27 @@
 <% if recipe.image != nil %>
-	<div id="recipe_<%= recipe.id %>" class = "recipe">
-		<div class="recipecontent">
-			<h1><%= recipe.name %></h1><br>
-				<div class="image">
-					<%= image_tag recipe.image %>
-				</div>
-				<p><%= recipe.description %></p><br>
-					<% if recipe.recipeYield %>
-						<p>Serves <%= recipe.recipeYield%></p>
-					<% end %>
-					<% if recipe.prepTime %>
-						<p>Prep Time <%= recipe.prepTime %></p>
-					<% end %>
-					<% if recipe.cookTime %>
-						<p>Cook Time <%= recipe.cookTime%></p>
-					<% end %>
-					<% if current_user %>
-						<%= recipe.ingredients.gsub!(/\n/,', ')%>
-					<% end %>
-				<hr>
-				<%= render partial: 'favoriting' , :locals => { :recipe => recipe, user: @user } %>
+	<div class="grid-item">
+		<div id="recipe_<%= recipe.id %>" class = "recipe">
+			<div class="recipecontent">
+				<h1><%= recipe.name %></h1><br>
+					<div class="image">
+						<%= image_tag recipe.image %>
+					</div>
+					<p><%= recipe.description %></p><br>
+						<% if recipe.recipeYield %>
+							<p>Serves <%= recipe.recipeYield%></p>
+						<% end %>
+						<% if recipe.prepTime %>
+							<p>Prep Time <%= recipe.prepTime %></p>
+						<% end %>
+						<% if recipe.cookTime %>
+							<p>Cook Time <%= recipe.cookTime%></p>
+						<% end %>
+						<% if current_user %>
+							<%= recipe.ingredients.gsub!(/\n/,', ')%>
+						<% end %>
+					<hr>
+					<%= render partial: 'favoriting' , :locals => { :recipe => recipe, user: @user } %>
+			</div>
 		</div>
 	</div>
 <% end %>

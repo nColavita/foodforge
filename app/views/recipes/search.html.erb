@@ -1,12 +1,13 @@
 <div class="container">
-</div>
-
-<div class="container matches">
 	<h1>Our Results!</h1>
-		<% @recipes.each do |recipe| %>
+	<div class="grid">
+		<div class="grid-sizer"></div>	
+			<% @recipes.each do |recipe| %>
 			<%= render partial: 'recipe', object: recipe %>
 		<% end %>
+	</div>
 </div>
+
 
 
  <!-- && (Net::HTTP.get_response(URI.parse(recipe.image)).code == '200') -->
