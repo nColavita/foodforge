@@ -18,12 +18,10 @@
 
 $(document).on("page:change",function(){
 
-// ------ AJAX Favorite and Unfavorite ----- //
-	// $('.button_to').on('ajax:success', function(){
-	// 	$(this).html('<input type="submit" input value="Unfavorite" />');
-	// 	$(this).
-	// })
-// ------ AJAX Favorite and Unfavorite ----- //
+// ------ Masonry Grid System ----- //
 
+// ------ Masonry Grid System ----- //
 
 })
+
+

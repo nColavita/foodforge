@@ -1,0 +1,9 @@
+<div class="test">	
+	<% if current_user %> 
+		<% if current_user.recipes.include? recipe %>
+			<p class="unfavorite"><%= button_to 'unfavorite', unfavorite_recipe_path(recipe.id), remote: true %> </p>
+		<% else %>
+			<p class='favorite'><%= button_to 'favorite', favorite_recipe_path(recipe.id), remote: true %> </p>
+		<% end %>
+	<% end %>
+</div>
