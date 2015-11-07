@@ -27,6 +27,8 @@ $(document).on("page:change",function(){
 		gutter: 5
 	});
 
+	
+
 // ------ Masonry Grid System ----- //
 
 })

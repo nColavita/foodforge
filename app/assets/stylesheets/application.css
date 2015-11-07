@@ -199,11 +199,9 @@
 		margin-top: 5em;
 	}*/
 
- /*.recipe{
- 	margin: .2em .4em .4em .4em;
-
- 	display: inline-block;
- }*/
+ .recipe{
+ 	margin-bottom: .4em;
+ }
 
 /* .recipecontent img{
  	text-align: center;
@@ -213,12 +211,29 @@
 		background-color: #F8FFFE;
 		
 		box-shadow: 1px 1px 5px 1px #ccc;
-		padding: .5em;
+		/*padding: .5em;*/
 		overflow: hidden;
 	}
 
 	.image img{
-		max-width: 65%;
+		max-width: 85%;
+		margin-left: 5%;
+	}
+
+	.button_to input[value="favorite"]{
+		border-radius: 8px;
+		font-size: 2em;
+		border: none;
+		background-color: #00FF11;
+		color: white;
+	}
+
+	.button_to input[value="unfavorite"]{
+		border-radius: 8px;
+		font-size: 2em;
+		border: none;
+		background-color: #FF2F04;
+		color: white;
 	}
 
 /********* Recipes Index **********/
