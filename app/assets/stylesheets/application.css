@@ -212,7 +212,7 @@
 		
 		box-shadow: 1px 1px 5px 1px #ccc;
 		padding: 2em;
-		overflow: hidden;
+		/*overflow: hidden;*/
 	}
 
 	.image img{

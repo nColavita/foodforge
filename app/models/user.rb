@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
 	has_many :favorites, dependent: :destroy
-	has_many :recipes, through: :favorites, dependent: :destroy
+	has_many :recipes, through: :favorites
 
 	#Instance method for every user. current_user.favorites 
 	# def favorites

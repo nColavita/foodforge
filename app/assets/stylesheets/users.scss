@@ -11,3 +11,18 @@
 
 	}
 }
+
+input[type="checkbox"]{
+	-webkit-transform: scale(2);
+	margin: .2em;
+  // position: absolute;
+  // left: -9999px;
+  // width: 200px;
+  .text{
+  	font-size: 2em;
+  }
+}
+
+.checklist{
+	padding: 1em;
+}

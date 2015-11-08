@@ -1,0 +1,35 @@
+<div class="container matches">
+	<div class="row">
+		<% @user.recipes.each do |recipe| %>
+			<% if recipe.image != nil %>
+				<div class="col-md-4 recipes">
+					<div class="recipecontent">
+						<h1><%= recipe.name %></h1><br>
+							<div class="image">
+								<%= image_tag recipe.image %>
+							</div>
+							<p> <%= link_to "Directions", recipe.url, target: "_blank" %> </p>
+							<p><%= recipe.description %></p><br>
+								<% if recipe.recipeYield %>
+									<p>Serves <%= recipe.recipeYield%></p>
+								<% end %>
+								<% if recipe.prepTime %>
+									<p>Prep Time <%= recipe.prepTime %></p>
+								<% end %>
+								<% if recipe.cookTime %>
+									<p>Cook Time <%= recipe.cookTime%></p>
+								<% end %> 
+								<!-- Dropdown For Ingredients -->
+								<% recipe.shopping_list(recipe.ingredients).each do |item| %>
+									  <p id="<%= item %>" class="checklist">
+    									<input type="checkbox" id="test2" />
+    									<label for="item" class="text"><%= item %></label>
+  									</p>
+								<% end %>	
+							<hr>
+							<p><%= button_to 'unfavorite', unfavorite_recipe_path(recipe.id) %> </p>
+					</div>
+				</div>
+			<% end %>
+		<% end %>
+	</div>

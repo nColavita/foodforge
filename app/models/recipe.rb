@@ -7,12 +7,8 @@ class Recipe < ActiveRecord::Base
   	where('ingredients LIKE :query', query: "%#{query}%")
 	end
 
-	def self.find_multiple(*query)
-	  rel = self
-	  keywords.each do |k|
-	    rel = rel.where("ingredients LIKE ?", "%#{k}%")
-	  end
-	  rel
+	def shopping_list(ingredients)
+		list = ingredients.split(/\n/)
 	end
 
 end
