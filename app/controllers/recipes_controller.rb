@@ -27,7 +27,6 @@ class RecipesController < ApplicationController
 			format.html { redirect_to current_user }
 			@fav.destroy
 			format.js 
-		
 		end
 	end
 

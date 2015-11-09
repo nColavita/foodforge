@@ -1,6 +1,6 @@
 
 <div class="container home_page">
-	<div class="row">
+	<div class="row search_box_img">
 		<div class="col-md-12 search_area">
 			<div class="text_section">
 				<h1>What are we cooking with today?</h1>
@@ -8,35 +8,23 @@
 			</div>
 		</div>
 	</div>
+</div>
 
-	<div class="row recipes_top4">
-
-		<div class="col-md-3">
-			<div class="top_recipe">
-
-			</div>
-		</div>
-
-		<div class="col-md-3">
-			<div class="top_recipe">
-				
-			</div>
-		</div>
-
-		<div class="col-md-3">
-			<div class="top_recipe">
-				
-			</div>
-		</div>
-
-		<div class="col-md-3">
-			<div class="top_recipe">
-				
-			</div>
+<div class="container top_favorites_container">
+	<div class="row recipes_top4">	
+		<div id="top4">
+			<h2>Top Favorited Recipes!</h2>
+			<% @recipes.each do |recipe| %>
+				<div class="col-md-3 top_col_3">
+					<div class="top_recipe">
+						<%= recipe.name %>
+						<p class="top_img"><%= image_tag recipe.image %></p>
+					</div>
+				</div>
+			<% end %>
 		</div>
 	</div>
 </div>
-
 
 <div class="container company_info">
 
@@ -62,6 +50,7 @@
 </div>
 
 <div class="container">
+
 	<div class="row">
 		<div class="col-md-4 icon">
 			

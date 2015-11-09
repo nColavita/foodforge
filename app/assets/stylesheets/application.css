@@ -105,7 +105,7 @@
 
 	.search_area{
 		text-align: center;
-		margin: 10em 0em 5em 0em;
+		margin: 12em 0em 5em 0em;
 	}
 
 	.text_section{
@@ -118,6 +118,10 @@
 	.recipes_of_the_week{
 		font-size: 3em;
 		color: black;
+	}
+
+	.search_box_img{
+		height: 550px;
 	}
 
 	/***** Form *****/
@@ -137,7 +141,38 @@
 
 	/***** Form *****/
 
+	/********* Top 4 **********/
+
+		.top_favorites_container{
+			padding: 2em;
+		}
+
+		.top_col_3{
+			background-color: none;
+		}
+
+		.top_recipe{
+			height: 500px;
+			background-color: rgba(0,0,0,0);
+		}
+
+		#top4{
+			font-size: 3em;
+			text-align: center;
+			height: 600px;
+			background-color: #CCFFC9;
+		}
+
+		 .top_img img{
+		 	width: 75%;
+		 	height: relative;
+		}
+
+	/********* Top 4 **********/
+
 /********* Home Page Part1 **********/
+
+
 
 /********* Home Page Part2 **********/
 
@@ -172,6 +207,8 @@
 
 /********* Home Page Part2 **********/
 
+
+
 /********* Home Page Part3 **********/
 
 	.connect{
@@ -192,6 +229,8 @@
 	}
 
 /********* Home Page Part3 **********/
+
+
 
 /********* Recipes Index **********/
 

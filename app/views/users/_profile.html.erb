@@ -10,15 +10,6 @@
 							</div>
 							<p> <%= link_to "Directions", recipe.url, target: "_blank" %> </p>
 							<p><%= recipe.description %></p><br>
-								<% if recipe.recipeYield %>
-									<p>Serves <%= recipe.recipeYield%></p>
-								<% end %>
-								<% if recipe.prepTime %>
-									<p>Prep Time <%= recipe.prepTime %></p>
-								<% end %>
-								<% if recipe.cookTime %>
-									<p>Cook Time <%= recipe.cookTime%></p>
-								<% end %> 
 								<!-- Dropdown For Ingredients -->
 								<% recipe.shopping_list(recipe.ingredients).each do |item| %>
 									  <p id="<%= item %>" class="checklist">

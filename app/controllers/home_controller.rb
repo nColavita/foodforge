@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
 
-	def show	
+	def show
+		@recipes = Recipe.top4	
 	end
 
 end
