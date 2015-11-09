@@ -3,8 +3,14 @@ class Recipe < ActiveRecord::Base
 	
 	# after_create :add_current_user_to_recipe_users
 
+	# def self.find_matches(query)
+	# 	where('ingredients LIKE :query', query: "%#{query.downcase}%")
+	# end
+
 	def self.find_matches(query)
-  	where('ingredients LIKE :query', query: "%#{query}%")
+		query.inject(self) do | result, q |
+			result.where("ingredients LIKE ?", "%#{q}%")
+		end
 	end
 
 	def shopping_list(ingredients)
