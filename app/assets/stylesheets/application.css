@@ -157,7 +157,8 @@
 		}
 
 		#top4{
-			font-size: 3em;
+			padding: 2em;
+			font-size: 2em;
 			text-align: center;
 			height: 600px;
 			background-color: #CCFFC9;
