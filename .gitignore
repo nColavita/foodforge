@@ -17,3 +17,4 @@ log/*
 /tmp
 
 db/recipeitems-latest.json
+db/mock_db.json

@@ -46,6 +46,11 @@
 		height: 5.95em;
 	}
 
+	header a:hover{
+		text-decoration: none;
+		color: #F5DA96;
+	}
+
 	nav{
 		float: right;
 		/*margin: 20px 0px 10px 0px;*/
@@ -62,8 +67,17 @@
 		padding: .8em .2em .8em .2em;
 	}
 
+	header nav ul li a{
+		color: black;
+	}
+
 	header nav ul li:hover{
-		background-color: #F58F11;
+		background-color: #F5DA96;
+	}
+
+	header nav ul li a:hover{
+		text-decoration: none;
+		color: white;
 	}
 
 	.links{
@@ -144,7 +158,8 @@
 	/********* Top 4 **********/
 
 		.top_favorites_container{
-			padding: 2em;
+			padding: 0;
+			height: 600px;
 		}
 
 		.top_col_3{
@@ -158,15 +173,23 @@
 
 		#top4{
 			padding: 2em;
-			font-size: 2em;
+			font-size: 1.3em;
 			text-align: center;
 			height: 600px;
-			background-color: #CCFFC9;
+			background-color: #FFFBDB;
+		}
+
+		.recipes_each{
+			margin-top: 3em;
+		}
+
+		.top_img{
 		}
 
 		 .top_img img{
 		 	width: 75%;
 		 	height: relative;
+		 	padding: 1em;
 		}
 
 	/********* Top 4 **********/
@@ -227,6 +250,18 @@
 		text-decoration: none;
 		font-size: 2em;
 		margin-left: .5em;
+	}
+
+	.social_media a img{
+		width: 60px;
+	}
+
+	.social_media{
+		margin-left: 4em;
+	}
+
+	.twitter a img{
+		width: 35px;
 	}
 
 /********* Home Page Part3 **********/

@@ -12,16 +12,16 @@ require 'net/http'
 http = Net::HTTP.new(@host, @port)
 http.read_timeout = 5
 
-file = File.read("../finalproject/db/mock_db.json")
+file = File.read("../foodforge/db/recipeitems-latest.json")
 recipes = JSON.parse(file)
 
 # !!!! Fix NET:ReadTimeout Error when handling the get_response conditional for creating Recipes !!!!
 
 recipes.each do |r|
 	begin	
-		if r['image'] != nil && (Net::HTTP.get_response(URI.parse(r['image'])).code == '200')
+		# if r['image'] != nil && (Net::HTTP.get_response(URI.parse(r['image'])).code == '200')
 			Recipe.create( name: r['name'], ingredients: r['ingredients'], url: r['url'], image: r['image'], cookTime: r['cookTime'], source: r['source'], recipeYield: r['recipeYield'], prepTime: r['prepTime'], description: r['description'])
-		end
+		# end
 	rescue 
 		nil
 	end

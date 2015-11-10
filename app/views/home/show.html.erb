@@ -17,8 +17,10 @@
 			<% @recipes.each do |recipe| %>
 				<div class="col-md-3 top_col_3">
 					<div class="top_recipe">
-						<%= recipe.name %>
-						<p class="top_img"><%= image_tag recipe.image %></p>
+						<div class="row recipes_each">
+							<%= recipe.name %>
+						</div>
+						<div class="top_img"><%= image_tag recipe.image %></div>
 					</div>
 				</div>
 			<% end %>
@@ -69,9 +71,9 @@
 	<div class="col-md-12">
 		<nav>
 			<ul>
-				<li>facebook</li>
-				<li>twitter</li>
-				<li>instagram</li>
+				<li class="social_media"><%= link_to image_tag("fbooklogo.png"), 'http://facebook.com', target: "_blank" %></li>
+				<li class="social_media twitter"><%= link_to image_tag("twitterlogo.png"), 'http://twitter.com', target: "_blank" %></li>
+				<li class="social_media"><%= link_to image_tag("instagramlogo.png"), 'http://instagram.com', target: "_blank" %></li>
 			</ul>
 		</nav>
 	</div>

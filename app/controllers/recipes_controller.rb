@@ -8,7 +8,7 @@ class RecipesController < ApplicationController
 		if @matches.length == 0
 			redirect_to root_path, notice: "Unfortunately we couldn't find any recipes based off your search."
 		end
-		@recipes = @matches.first(20)
+		@recipes = @matches.first(100)
 	end
 
 	def favorite
