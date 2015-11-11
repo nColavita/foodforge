@@ -10,9 +10,7 @@ task :error_404 => :environment do
 		rescue
 			nil
 		end
-		if index % 1000 == 0
 			puts index 
-		end
 	end
 end
 
