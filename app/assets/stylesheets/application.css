@@ -295,21 +295,38 @@
 		margin-left: 5%;
 	}
 
-	.button_to input[value="favorite"]{
-		border-radius: 8px;
-		font-size: 2em;
-		border: none;
-		background-color: #00FF11;
-		color: white;
-	}
+	/********* Buttons **********/
 
-	.button_to input[value="unfavorite"]{
-		border-radius: 8px;
-		font-size: 2em;
-		border: none;
-		background-color: #FF2F04;
-		color: white;
-	}
+		.button_to input[value="favorite"]{
+			border-radius: 8px;
+			font-size: 2em;
+			border: none;
+			background-color: #00FF11;
+			color: white;
+		}
+
+		.button_to input[value="unfavorite"]{
+			border-radius: 8px;
+			font-size: 2em;
+			border: none;
+			background-color: #FF2F04;
+			color: white;
+		}
+
+		.button_to input[value="text me!"]{
+			border-radius: 8px;
+			font-size: 2em;
+			border: none;
+			background-color: #00FF11;
+			color: white;
+		}
+
+		.user_buttons{
+			display: inline-block;
+		}
+
+	/********* Buttons **********/
+
 
 /********* Recipes Index **********/
 

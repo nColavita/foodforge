@@ -35,6 +35,16 @@ class UsersController < ApplicationController
   	redirect_to root_path, notice: 'account deleted'
   end
 
+  def text_me_now
+    json = params[:_json]
+    puts json
+    render nothing: true
+    
+    # ingredients = JSON.parse json.data
+    # JSON object being sent from the client and stored inside a variable
+    # This variable will be the body of the Twilio sms message
+  end
+
   private
 
   	def params_user
