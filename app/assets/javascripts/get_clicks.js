@@ -16,10 +16,20 @@ $(document).ready(function(){
 		$('.item').on('click', function(){
 			// get the value of the data-type, remove the _ and replace with spaces, 
 			//then push into empty array as a single string
-			string = $(this).attr('data-type');
+	    string = $(this).attr('data-type');
 			string = string.replace(/_/g, ' ');
-			result.push(string + ".");
-				console.log(result);
+	    if ($(this).is(':checked')){
+				result.push(string + ".");		
+			}
+			else if( ! $(this).is(':checked')) {
+				for (var i=result.length-1; i >= 0; i--) {
+					if(result[i] == (string + ".")){	
+						result.splice(i, 1);
+					}
+				}
+				
+			}
+			console.log(result);
 		})
 
 })
