@@ -36,13 +36,21 @@ class UsersController < ApplicationController
   end
 
   def text_me_now
+    @client = Twilio::REST::Client.new ENV['FOODFORGE_ACCOUNT_SID'], ENV['FOODFORGE_AUTH_TOKEN']
     @message = "Don't forget: "
     @message += params[:ingredients].join("\n")
-    
-    puts @message
+
+    proper_twilio_number = "+1" + current_user.phone_number
+
     respond_to do |format|
       format.js
     end
+
+    @client.messages.create(
+      from: '+1347-507-7135',
+      to: proper_twilio_number,
+      body: @message
+    )
 
     # ingredients = JSON.parse json.data
     # JSON object being sent from the client and stored inside a variable
