@@ -18,7 +18,7 @@
 							<% end %>	
 						<hr>
 						<div class="user_buttons">
-							<p class="text"><%= button_to 'text me!', textme_path, remote: true %> </p>
+							<p class="text"><%= button_to 'text me!',textme_path , {:class => "text" } %> </p>
 							<p><%= button_to 'unfavorite', unfavorite_recipe_path(recipe.id) %> </p>
 						</div>
 				</div>

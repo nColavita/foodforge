@@ -1,7 +1,7 @@
 var result = {"ingredients": []};
-function json_user_data (){
-	result = JSON.stringify(result);
-}
+// function json_user_data(){
+// 	result = JSON.stringify(result);
+// }
 
 
 $(document).ready(function(){
@@ -34,17 +34,17 @@ $(document).ready(function(){
 
 // ----- Send the result Array to my Rails application as a stringified JSON object ----- //
 
-	$('.button_to').on('click', function(){
+	$('.text').on('click', function(e){
 		// run the function to stringify the result array 
 		// before being sent to the ajax request
-		json_user_data();
-		$.ajax({
+		// json_user_data();
+ 		e.preventDefault();
+ 		$.ajax({
 		  url: "/textme" ,
 		  type: 'POST',
 		  data: result,
 		  dataType: 'json'
 		});
-	})
-	
+	})	
 
 })
